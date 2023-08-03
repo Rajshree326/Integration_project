@@ -7,7 +7,6 @@ const password = document.getElementById("password").value;
 fetch("https://qa2.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp", {
     method: "POST",
     body: JSON.stringify({ "login_id": login_id, "password": password }),
-    mode: 'no-cors',
     headers: {
         "Content-Type": "application/json"
     }
@@ -53,7 +52,6 @@ const data = {
 fetch("https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=create", {
     method: "POST",
     body: JSON.stringify(data),
-    mode: 'no-cors',
     headers: {
         "Content-Type": "application/json",
         "Authorization": "Bearer " + bearerToken
@@ -76,7 +74,6 @@ fetch("https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=create"
 function getCustomerList() {
 fetch("https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=get_customer_list", {
     method: "GET",
-    mode: 'no-cors',
     headers: {
         "Authorization": "Bearer " + bearerToken
     }
@@ -106,7 +103,6 @@ const data = {
 
 fetch("https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp", {
     method: "POST",
-    mode: 'no-cors',
     body: JSON.stringify(data),
     headers: {
         "Content-Type": "application/json",
@@ -160,7 +156,6 @@ const data = {
 fetch("https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp", {
     method: "POST",
     body: JSON.stringify(data),
-    mode: 'no-cors',
     headers: {
         "Content-Type": "application/json",
         "Authorization": "Bearer " + bearerToken
