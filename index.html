@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Management</title>
+</head>
+<body>
+    <h1>Customer Management</h1>
+    <form id="loginForm">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="button" onclick="authenticateUser()">Login</button>
+    </form>
+
+    <form id="customerForm" style="display:none;">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city">
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+        <button type="button" onclick="createCustomer()">Create Customer</button>
+        <button type="button" onclick="getCustomerList()">Get Customer List</button>
+        <button type="button" onclick="deleteCustomer()">Delete Customer</button>
+        <button type="button" onclick="updateCustomer()">Update Customer</button>
+    </form>
+
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>
